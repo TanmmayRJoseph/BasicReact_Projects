@@ -1,0 +1,140 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.App {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  color: white;
+  animation: slideIn 0.7s ease-out;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+input[type="text"]:focus {
+  transform: scale(1.05);
+}
+
+button {
+  background: #00c6ff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #0072ff;
+  transform: translateY(-3px);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  }
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 90%;
+    animation: slideInMobile 0.5s ease-out;
+  }
+}
+
+@keyframes slideInMobile {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

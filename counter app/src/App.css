@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .parent {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main {
+    height: 40vh;
+    width: 40vw;
+    background-color: aqua;
+    border-radius: 30px;
+ 
+  }
+  
+  .main h1 {
+    text-align: center;
+    margin: 2vh 0vw;
+    padding: 1vh 2vw;
+  }
+  .btn button{
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2.5vw;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 20px;
+
+  }
+button:hover{
+    background-color: orange;
+}
